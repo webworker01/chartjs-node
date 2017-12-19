@@ -82,7 +82,10 @@ class ChartjsNode extends EventEmitter {
                 };
 
                 const Chartjs = require('chart.js');
+                const ChartJSFinancial = require('chartjs-chart-financial');
                 this.emit('beforeDraw', Chartjs);
+                this.emit('beforeDraw', ChartJSFinancial);
+
                 if (configuration.options.plugins) {
                     Chartjs.pluginService.register(configuration.options.plugins);
                 }
